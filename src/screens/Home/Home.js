@@ -5,11 +5,17 @@ import Title from '../../components/Title/Title'
 const Home = () => {
   return (
     <View>
-         <Title></Title>
-         <view>
-              <Image style={styles.logo} source={{uri:'https://i.ibb.co/pnXVgdK/quiz-word-concept-23-2147852942.png',}}></Image>
-              <TouchableOpacity>start</TouchableOpacity>
-         </view>
+         <Title />
+         <View style={styles.bannerContainer}>
+               <Image 
+                    style={styles.banner}
+                    resizeMode="contain"  
+                    source={{uri:'https://i.ibb.co/pnXVgdK/quiz-word-concept-23-2147852942.png',}}
+               />
+         </View>
+         <TouchableOpacity>
+              <Text>start</Text>
+         </TouchableOpacity>
     </View>
   )
 }
@@ -20,8 +26,13 @@ const styles = StyleSheet.create({
      container:{
           padding:10
      },
-     logo:{
-          width:100,
-          height:100
+     bannerContainer:{
+          justifyContent:'center',
+          alignItems:'center'
+     },
+     banner:{
+          width:300,
+          height:300    
      }
+     
 })
